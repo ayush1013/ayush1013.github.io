@@ -1,0 +1,292 @@
+.logoBox {
+  display: flex;
+}
+
+.container {
+  width: 100%;
+}
+
+.Hello {
+  color: #c4c4c4;
+  font-size: 50px;
+}
+.Hello + h1 {
+  font-size: 40px;
+  color: #c4c4c4;
+  margin-bottom: 60px;
+}
+.Hello ~ h1 ~ p {
+  margin: 2px;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: italic;
+  color: #c4c4c4;
+}
+.Hello ~ h1 ~ p span {
+  color: aqua;
+}
+.Hello ~ h1 span {
+  color: aqua;
+  letter-spacing: 5px;
+  margin-left: 10px;
+}
+
+.introBox {
+  text-align: left;
+  margin-left: 100px;
+  margin-top: 130px;
+}
+.RBut {
+  display: flex;
+  margin-left: 100px;
+}
+.download {
+  text-decoration: none;
+  margin-top: 130px;
+}
+.RBut button {
+  display: block;
+  width: 160px;
+  height: 60px;
+  font-size: 30px;
+  font-weight: bold;
+  border-radius: 12px;
+  /* background-color: #343F50; */
+  background-color: #003140;
+  color: white;
+  border: 2px solid white;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  cursor: pointer;
+}
+
+.RBut button:hover {
+  color: black;
+  /* border-color: black; */
+  box-shadow: 0 0 5px #1388a8, 0 0 15px #1388a8, 0 0 20px #1388a8,
+    0 0 40px #96d7e9, 0 0 60px #31a9d8, 0 0 10px #96d7e9, 0 0 98px #31a9d8;
+  background-color: #fff6a9;
+  text-shadow: 0 0 5px #1388a8, 0 0 15px #1388a8, 0 0 20px #1388a8,
+    0 0 40px #96d7e9, 0 0 60px #31a9d8, 0 0 10px #96d7e9, 0 0 98px #31a9d8;
+  color: #fff6a9;
+}
+
+.inContainer {
+  display: flex;
+}
+
+.imgBox {
+  margin-top: 50px;
+  margin-left: 150px;
+  padding: 50px;
+  margin-top: 130px;
+}
+
+.imgBox img {
+  display: block;
+}
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .logoBox {
+    display: flex;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .Hello {
+    color: #c4c4c4;
+    font-size: 30px;
+  }
+  .Hello + h1 {
+    font-size: 24px;
+    color: #c4c4c4;
+  }
+  .Hello ~ h1 ~ p {
+    margin: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    font-style: italic;
+    color: #c4c4c4;
+  }
+  .Hello ~ h1 ~ p span {
+    color: aqua;
+  }
+  .Hello ~ h1 span {
+    color: aqua;
+    letter-spacing: 3px;
+    margin-left: 7px;
+  }
+
+  .introBox {
+    text-align: left;
+    margin-left: 60px;
+    margin-top: 100px;
+  }
+
+  .RBut {
+    display: flex;
+    margin-left: 60px;
+  }
+  .download {
+    text-decoration: none;
+    margin-top: 60px;
+  }
+  .RBut button {
+    display: block;
+    width: 96px;
+    height: 36px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 7.2px;
+    background-color: #003140;
+    color: white;
+    border: 1.2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+
+  .RBut button:hover {
+    box-shadow: 0 0 5px #1388a8, 0 0 15px #1388a8, 0 0 20px #1388a8,
+      0 0 40px #96d7e9, 0 0 60px #31a9d8, 0 0 10px #96d7e9, 0 0 98px #31a9d8;
+    background-color: #fff6a9;
+    text-shadow: 0 0 5px #1388a8, 0 0 15px #1388a8, 0 0 20px #1388a8,
+      0 0 40px #96d7e9, 0 0 60px #31a9d8, 0 0 10px #96d7e9, 0 0 98px #31a9d8;
+    color: #fff6a9;
+  }
+
+  .inContainer {
+    display: flex;
+  }
+
+  .imgBox {
+    margin-top: 30px;
+    margin-left: 70px;
+    padding: 30px;
+    /* box-shadow: rgba(10, 10, 0, 0.25) 0px 30px 20px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+    margin-top: 100px;
+  }
+
+  .imgBox img {
+    width: 280px;
+    display: block;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+  }
+}
+
+@media all and (min-width: 140px) and (max-width: 480px) {
+  .container {
+    width: 100%;
+    /* border: 1px solid black; */
+    width: 480px;
+  }
+
+  .logoBox {
+    display: flex;
+  }
+
+  .inContainer {
+    width: 480px;
+    display: grid;
+    margin: auto;
+    align-content: center;
+    /* border: 1px solid black; */
+    justify-content: center;
+  }
+
+  .Hello {
+    /* border: 1px solid black; */
+    color: #c4c4c4;
+    font-size: 50px;
+    margin: auto;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    width: 340px;
+    margin-left: -34px;
+  }
+  .Hello + h1 {
+    font-size: 24px;
+    color: #c4c4c4;
+    width: 240px;
+    margin-bottom: 40px;
+  }
+  .Hello ~ h1 ~ p {
+    margin: auto;
+    margin: 2px;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: italic;
+    color: #c4c4c4;
+    margin-left: -30px;
+    /* border: 1px solid red; */
+    width: 360px;
+  }
+  .Hello ~ h1 ~ p span {
+    color: aqua;
+  }
+  .Hello ~ h1 span {
+    color: aqua;
+    letter-spacing: 2px;
+    margin-left: 5px;
+  }
+
+  .imgBox {
+    width: 400px;
+    margin: auto;
+    padding: 20px;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+  }
+
+  .imgBox img {
+    width: 400px;
+    display: block;
+    margin: auto;
+  }
+
+  .RBut {
+    display: flex;
+    margin-left: 340px;
+    width: 96px;
+    /* border: 1px solid black; */
+  }
+  .download {
+    text-decoration: none;
+    margin-top: -195px;
+    height: 36px;
+    /* border: 1px solid green; */
+  }
+  .RBut button {
+    display: block;
+    width: 96px;
+    height: 36px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 7.2px;
+    background-color: #003140;
+    color: white;
+    border: 1.2px solid white;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+      rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+      rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset,
+      rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+      rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+      rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  }
+
+  .RBut button:hover {
+    box-shadow: 0 0 5px #1388a8, 0 0 15px #1388a8, 0 0 20px #1388a8,
+      0 0 40px #96d7e9, 0 0 60px #31a9d8, 0 0 10px #96d7e9, 0 0 98px #31a9d8;
+    background-color: #fff6a9;
+    text-shadow: 0 0 5px #1388a8, 0 0 15px #1388a8, 0 0 20px #1388a8,
+      0 0 40px #96d7e9, 0 0 60px #31a9d8, 0 0 10px #96d7e9, 0 0 98px #31a9d8;
+    color: #fff6a9;
+  }
+}
