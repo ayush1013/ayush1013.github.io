@@ -1,24 +1,6 @@
 import "../Styles/Projects.css";
-// import GitHubCalendar from "react-github-calendar";
 
 function Projects() {
-
-  // const selectLastHalfYear = (contributions) => {
-  //   const currentYear = new Date().getFullYear();
-  //   const currentMonth = new Date().getMonth();
-  //   const shownMonths = 7;
-
-  //   return contributions.filter((day) => {
-  //     const date = new Date(day.date);
-  //     const monthOfDay = date.getMonth();
-
-  //     return (
-  //       date.getFullYear() === currentYear ||
-  //       monthOfDay > currentMonth - shownMonths ||
-  //       monthOfDay <= currentMonth
-  //     );
-  //   });
-  // };
 
 
   return (
@@ -189,11 +171,9 @@ function Projects() {
 
       </div>
       <div className="gitStats">
-        {/* <GitHubCalendar
-          username="ayush1013"
-          transformData={selectLastHalfYear}
-          width="90vw"
-        /> */}
+        <div>
+          <img src="https://awesomescreenshot.s3.amazonaws.com/image/4119967/36427325-5c95c33ed6509fbfc7c8f9ba08acd3c6.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20230124%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230124T114741Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=a583792468a0749c9acd2820e98cd99d77e4952ae03cf558d2a005dec25827e1" alt="" />
+        </div>
         <div>
           <img src="https://github-readme-streak-stats.herokuapp.com/?user=ayush1013&" alt="" />
         </div>

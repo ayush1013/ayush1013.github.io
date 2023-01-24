@@ -11,6 +11,7 @@ function Media() {
           <span>
             <a className="mediaIcon" href="https://www.linkedin.com/in/ayush-verma-4a3291224/" target="_blank">
               {/* <FontAwesomeIcon className="liIcon" icon={faLinkedin} /> */}
+              <img  className="mediaIcon" src="https://img.icons8.com/fluency/512/linkedin.png" alt="" />
             </a>
           </span>
         </li>
@@ -19,6 +20,7 @@ function Media() {
           <span>
             <a className="mediaIcon" href="https://twitter.com/Ayush_Verma_13" target="_blank" >
               {/* <FontAwesomeIcon className="twitIcon" icon={faTwitter} /> */}
+              <img className="mediaIcon" src="https://img.icons8.com/fluency/512/twitter.png" alt="" />
             </a>
           </span>
         </li>
@@ -31,6 +33,7 @@ function Media() {
           <span>
           <a className="mediaIcon" href="https://github.com/ayush1013" target="_blank" >
               {/* <FontAwesomeIcon className="gitIcon" icon={faGithub} /> */}
+              <img className="mediaIcon" src="https://img.icons8.com/ios-glyphs/512/github.png" alt="" />
             </a>
           </span>
         </li>
