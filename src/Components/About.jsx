@@ -6,7 +6,7 @@ function About() {
         <div>
             <div className={style.container} >
                 <div className={style.profileBox} >
-                    <img src="https://media-exp1.licdn.com/dms/image/D5603AQG7nenrFZ0mDw/profile-displayphoto-shrink_800_800/0/1668853111538?e=1675296000&v=beta&t=eG-kutMEqyuf-y0f7YhWc1nsBMa0H13z2ppl4JOoHHg" alt="" />
+                    <img src="https://media.licdn.com/dms/image/D5603AQG7nenrFZ0mDw/profile-displayphoto-shrink_800_800/0/1668853111538?e=1681344000&v=beta&t=vfDlBaNAD2TDSPon2rc-ZAXrRqoSsqZ7zJTjYUY0xAc" alt="" />
                 </div>
                 <div>
                     <div className={style.about} >

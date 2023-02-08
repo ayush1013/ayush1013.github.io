@@ -70,7 +70,7 @@ function Navbar() {
           >
             Contact
           </a>
-          <a href="https://drive.google.com/u/0/uc?id=1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as&export=download">
+          <a href="https://drive.google.com/file/d/1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as/view?usp=sharing" target="_blank">
             Resume
           </a>
         </div>

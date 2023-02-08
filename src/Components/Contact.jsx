@@ -40,7 +40,7 @@ function Contact() {
           <form >
             <input type="text" placeholder="Name" />
             <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Message" />
+            <input type="text" placeholder="Message" className="msg" />
             <button type="submit" className="submit" > Send </button>
           </form>
         </div>
