@@ -1,7 +1,8 @@
 import "../Styles/Projects.css";
+import React from 'react';
+// import Calendar from "./Calendar";
 
 function Projects() {
-
 
   return (
     <div className="Con">
@@ -170,7 +171,7 @@ function Projects() {
       </div>
       <div className="gitStats">
         <div>
-          <img src="https://awesomescreenshot.s3.amazonaws.com/image/4119967/36910133-6b13228fed7b0dc9a8ec7b96e4363fea.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAJSCJQ2NM3XLFPVKA%2F20230208%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20230208T142201Z&X-Amz-Expires=28800&X-Amz-SignedHeaders=host&X-Amz-Signature=c422c156ad97ce44d71174adeff8ff9641bd50d380dfe4adbc3d3dfe197c7824" alt="" />
+          {/* <Calendar/> */}
         </div>
         <div>
           <img src="https://github-readme-streak-stats.herokuapp.com/?user=ayush1013&" alt="" />

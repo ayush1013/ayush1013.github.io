@@ -1,6 +1,6 @@
 import style from "../Styles/Skills.module.css";
 import "../Styles/SkillIcon.css"
-
+import React from 'react';
 const skills = [
   {
     image: "https://img.icons8.com/plasticine/512/react.png",

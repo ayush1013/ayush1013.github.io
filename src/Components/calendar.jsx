@@ -1,6 +1,8 @@
 import React from 'react'
 import GitHubCalendar from "react-github-calendar";
-const calendar = () => {
+
+
+const Calendar = () => {
   const selectLastHalfYear = (contributions) => {
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth();
@@ -29,4 +31,4 @@ const calendar = () => {
   )
 }
 
-export default calendar
+export default Calendar

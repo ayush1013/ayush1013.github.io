@@ -13,13 +13,18 @@
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   padding: 20px;
   transition: 0.75s;
+  background-color: white;
+  
+  box-shadow: 0 0 5px #1388a8, 0 0 15px #1388a8, 0 0 20px #1388a8,
+    0 0 40px #96d7e9, 0 0 60px #31a9d8, 0 0 10px #96d7e9, 0 0 98px #31a9d8;
 }
 
-.profileBox:hover {
+/* .profileBox:hover {
   box-shadow: 0 0 5px #1388a8, 0 0 15px #1388a8, 0 0 20px #1388a8,
     0 0 40px #96d7e9, 0 0 60px #31a9d8, 0 0 10px #96d7e9, 0 0 98px #31a9d8;
   background-color: #fff6a9;
-}
+  background-color: white;
+} */
 
 .profileBox img {
   width: 400px;
@@ -52,7 +57,8 @@
   text-align: justify;
   color: #c4c4c4;
   margin: 0px;
-  transition: 2s;
+  transition: 0.3s;
+  
 }
 
 .about {

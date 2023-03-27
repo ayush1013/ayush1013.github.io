@@ -1,12 +1,12 @@
 import style from "../Styles/About.module.css";
-
+import React from 'react';
 function About() {
 
     return (
         <div>
             <div className={style.container} >
                 <div className={style.profileBox} >
-                    <img src="https://media.licdn.com/dms/image/D5603AQG7nenrFZ0mDw/profile-displayphoto-shrink_800_800/0/1668853111538?e=1681344000&v=beta&t=vfDlBaNAD2TDSPon2rc-ZAXrRqoSsqZ7zJTjYUY0xAc" alt="" />
+                    <img src="https://media.licdn.com/dms/image/D5603AQHA6mGDO8opQg/profile-displayphoto-shrink_800_800/0/1679654609103?e=1685577600&v=beta&t=f5Of7DDsNpuK8jMDmiVTJf4mjItVmaVslWPIMYmYDjM" alt="image" />
                 </div>
                 <div>
                     <div className={style.about} >

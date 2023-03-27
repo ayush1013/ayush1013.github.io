@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from "react";
 import navStyle from "../Styles/navbar.module.css";
 import About from "./About";

@@ -1,7 +1,7 @@
 import "../Styles/Media.css";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin, faTwitter, faGithub, faBar} from "@fortawesome/free-brands-svg-icons";
-
+import React from 'react';
 function Media() {
   return (
     <div>
