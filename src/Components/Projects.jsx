@@ -1,9 +1,8 @@
 import "../Styles/Projects.css";
-import React from 'react';
-// import Calendar from "./Calendar";
+import React from "react";
+// import GithubCalender from "./Calendar";
 
 function Projects() {
-
   return (
     <div className="Con">
       <div className="projects">
@@ -11,17 +10,12 @@ function Projects() {
       </div>
 
       <div className="container">
-
         <div className="card">
           <div className="face face1">
             <div className="content">
               <i className="fab fa-apple"></i>
               <a href="https://techworld-tau.vercel.app/" target="_blank">
-                <img
-                  className="image"
-                  src="https://user-images.githubusercontent.com/107465630/214306318-0d37191d-645e-4ea9-a9a2-04211f06ec46.png"
-                  alt="Image"
-                />
+                <img className="image" src="techworld.png" alt="Image" />
               </a>
             </div>
           </div>
@@ -29,16 +23,35 @@ function Projects() {
             <div className="content">
               <h2 className="clone">Tech World</h2>
               <p className="aboutweb">
-                The TechWorld is an details oriented website. Through this website, user can process orders, accept payments and logistics, and provide customer services. User Friendly UI ....
+                The TechWorld is an details oriented website. Through this
+                website, user can process orders, accept payments and logistics,
+                and provide customer services. User Friendly UI ....
               </p>
-              <a href="https://github.com/Raj-1313/TechWorld" type="button" target="_blank">
+              <div className="tachStack">
+                <p>React</p>
+                <p>Redux</p>
+                <p>Chakra UI</p>
+                <p>Node JS.</p>
+                <p>Mongo DB</p>
+                <p>Express</p>
+                <p>Razor Pay</p>
+              </div>
+              <a
+                href="https://github.com/Raj-1313/TechWorld"
+                type="button"
+                target="_blank"
+              >
                 <img
                   className="giticon"
                   src="https://img.icons8.com/ios-glyphs/512/github.png"
                   alt=""
                 />
               </a>
-              <a href="https://techworld-tau.vercel.app/" type="button" target="_blank">
+              <a
+                href="https://techworld-tau.vercel.app/"
+                type="button"
+                target="_blank"
+              >
                 <img
                   className="giticon redirect"
                   src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/512/external-share-interface-kiranshastry-solid-kiranshastry.png"
@@ -53,12 +66,11 @@ function Projects() {
           <div className="face face1">
             <div className="content">
               <i className="fab fa-windows"></i>
-              <a href="https://clever-kitsune-a5635e.netlify.app/" target="_blank" >
-                <img
-                  className="image"
-                  src="https://www.artlebedev.com/kfc/kfc-main.jpg"
-                  alt="kfcImage"
-                />
+              <a
+                href="https://clever-kitsune-a5635e.netlify.app/"
+                target="_blank"
+              >
+                <img className="image" src="kfc.png" alt="kfcImage" />
               </a>
             </div>
           </div>
@@ -70,14 +82,27 @@ function Projects() {
                 chain headquartered in Louisville, Kentucky, that specializes in
                 fried chicken.
               </p>
-              <a href="https://github.com/naveenSaini1/KFC-2.O" type="button" target="_blank">
+              <div className="tachStack">
+                <p>Javascript</p>
+                <p>HTML</p>
+                <p>CSS</p>
+              </div>
+              <a
+                href="https://github.com/naveenSaini1/KFC-2.O"
+                type="button"
+                target="_blank"
+              >
                 <img
                   className="giticon"
                   src="https://img.icons8.com/ios-glyphs/512/github.png"
                   alt=""
                 />
               </a>
-              <a href="https://clever-kitsune-a5635e.netlify.app/" type="button" target="_blank">
+              <a
+                href="https://clever-kitsune-a5635e.netlify.app/"
+                type="button"
+                target="_blank"
+              >
                 <img
                   className="giticon redirect"
                   src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/512/external-share-interface-kiranshastry-solid-kiranshastry.png"
@@ -92,12 +117,11 @@ function Projects() {
           <div className="face face1">
             <div className="content">
               <i className="fab fa-android"></i>
-              <a href="https://boisterous-hotteok-75bc34.netlify.app/index.html" target="_blank" >
-                <img
-                  className="image"
-                  src="https://anasqu7.github.io/images/projects/kimaye.png"
-                  alt="kfcImage"
-                />
+              <a
+                href="https://boisterous-hotteok-75bc34.netlify.app/index.html"
+                target="_blank"
+              >
+                <img className="image" src="/kimaye.png" alt="kfcImage" />
               </a>{" "}
               {/* <h3>Android</h3> */}
             </div>
@@ -110,14 +134,27 @@ function Projects() {
                 a promise of consistently delivering the safest and superior
                 quality fruits.
               </p>
-              <a href="https://github.com/Ajay470/Team-squalid-wire" type="button" target="_blank">
+              <div className="tachStack">
+                <p>Javascript</p>
+                <p>HTML</p>
+                <p>CSS</p>
+              </div>
+              <a
+                href="https://github.com/Ajay470/Team-squalid-wire"
+                type="button"
+                target="_blank"
+              >
                 <img
                   className="giticon"
                   src="https://img.icons8.com/ios-glyphs/512/github.png"
                   alt=""
                 />
               </a>
-              <a href="https://boisterous-hotteok-75bc34.netlify.app/index.html" type="button" target="_blank">
+              <a
+                href="https://boisterous-hotteok-75bc34.netlify.app/index.html"
+                type="button"
+                target="_blank"
+              >
                 <img
                   className="giticon redirect"
                   src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/512/external-share-interface-kiranshastry-solid-kiranshastry.png"
@@ -132,10 +169,10 @@ function Projects() {
           <div className="face face1">
             <div className="content">
               <i className="fab fa-apple"></i>
-              <a href="">
+              <a href="https://ephemeral-quokka-680438.netlify.app/" target="_blank">
                 <img
                   className="image"
-                  src="https://simg.nicepng.com/png/small/4-42119_coming-soon-coming-soon-logo-png.png"
+                  src="/medicinestore.png"
                   alt="kfcImage"
                 />
               </a>
@@ -150,14 +187,26 @@ function Projects() {
                 delectus illum perferendis maiores quia molestias vitae fugiat
                 aspernatur alias corporis?
               </p>
-              <a href="" type="button">
+              <div className="tachStack">
+                <p>Javascript</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>React</p>
+                <p>Chakra UI</p>
+                <p>Json Server</p>
+              </div>
+              <a href="https://github.com/Adii1707/medicine-store-project" target="_blank" type="button">
                 <img
                   className="giticon"
                   src="https://img.icons8.com/ios-glyphs/512/github.png"
                   alt=""
                 />
               </a>
-              <a href="https://clever-kitsune-a5635e.netlify.app/" type="button" target="_blank">
+              <a
+                href="https://ephemeral-quokka-680438.netlify.app/"
+                type="button"
+                target="_blank"
+              >
                 <img
                   className="giticon redirect"
                   src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/512/external-share-interface-kiranshastry-solid-kiranshastry.png"
@@ -167,20 +216,26 @@ function Projects() {
             </div>
           </div>
         </div>
-
       </div>
       <div className="gitStats">
+        <div>{/* <GithubCalender/> */}</div>
         <div>
-          {/* <Calendar/> */}
+          <img
+            src="https://github-readme-streak-stats.herokuapp.com/?user=ayush1013&"
+            alt=""
+          />
         </div>
         <div>
-          <img src="https://github-readme-streak-stats.herokuapp.com/?user=ayush1013&" alt="" />
+          <img
+            src="https://github-readme-stats.vercel.app/api?username=ayush1013&show_icons=true&locale=en"
+            alt=""
+          />
         </div>
         <div>
-          <img src="https://github-readme-stats.vercel.app/api?username=ayush1013&show_icons=true&locale=en" alt="" />
-        </div>
-        <div>
-          <img src="https://github-readme-stats.vercel.app/api/top-langs?username=ayush1013&show_icons=true&locale=en&layout=compact" alt="" />
+          <img
+            src="https://github-readme-stats.vercel.app/api/top-langs?username=ayush1013&show_icons=true&locale=en&layout=compact"
+            alt=""
+          />
         </div>
       </div>
     </div>

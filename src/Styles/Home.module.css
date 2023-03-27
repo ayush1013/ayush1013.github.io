@@ -66,6 +66,7 @@
     rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .RBut button:hover {
@@ -109,7 +110,7 @@
   display: block;
 }
 
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (min-width: 480px) and (max-width: 900px) {
   .logoBox {
     display: flex;
   }

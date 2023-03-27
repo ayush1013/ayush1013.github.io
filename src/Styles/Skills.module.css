@@ -69,7 +69,7 @@
 }
 
 
-@media all and (min-width: 480px) and (max-width: 768px) {
+@media all and (min-width: 480px) and (max-width: 900px) {
   .container {
     width: 100%;
     /* border: 1px solid black; */

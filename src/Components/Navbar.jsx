@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import { useState } from "react";
 import navStyle from "../Styles/navbar.module.css";
 import About from "./About";
@@ -71,8 +71,18 @@ function Navbar() {
           >
             Contact
           </a>
-          <a href="https://drive.google.com/file/d/1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as/view?usp=sharing" target="_blank">
-            Resume
+          <a href="https://drive.google.com/u/0/uc?id=1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as&export=download">
+            <button
+              onClick={() =>
+                window.open(
+                  "https://drive.google.com/file/d/1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as/view?usp=sharing",
+                  "_blank",
+                  "noreferrer"
+                )
+              }
+            >
+              Resume
+            </button>
           </a>
         </div>
       </div>
