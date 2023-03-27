@@ -116,6 +116,58 @@ function Projects() {
         <div className="card">
           <div className="face face1">
             <div className="content">
+              <i className="fab fa-apple"></i>
+              <a href="https://ephemeral-quokka-680438.netlify.app/" target="_blank">
+                <img
+                  className="image"
+                  src="/medicinestore.png"
+                  alt="kfcImage"
+                />
+              </a>
+            </div>
+          </div>
+          <div className="face face2">
+            <div className="content">
+              <h2 className="clone">In The Progress</h2>
+              <p className="aboutweb">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
+                repudiandae, explicabo voluptate et hic cum ratione a. Officia
+                delectus illum perferendis maiores quia molestias vitae fugiat
+                aspernatur alias corporis?
+              </p>
+              <div className="tachStack">
+                <p>Javascript</p>
+                <p>HTML</p>
+                <p>CSS</p>
+                <p>React</p>
+                <p>Chakra UI</p>
+                <p>Json Server</p>
+              </div>
+              <a href="https://github.com/Adii1707/medicine-store-project" target="_blank" type="button">
+                <img
+                  className="giticon"
+                  src="https://img.icons8.com/ios-glyphs/512/github.png"
+                  alt=""
+                />
+              </a>
+              <a
+                href="https://ephemeral-quokka-680438.netlify.app/"
+                type="button"
+                target="_blank"
+              >
+                <img
+                  className="giticon redirect"
+                  src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/512/external-share-interface-kiranshastry-solid-kiranshastry.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="card">
+          <div className="face face1">
+            <div className="content">
               <i className="fab fa-android"></i>
               <a
                 href="https://boisterous-hotteok-75bc34.netlify.app/index.html"
@@ -165,76 +217,28 @@ function Projects() {
           </div>
         </div>
 
-        <div className="card">
-          <div className="face face1">
-            <div className="content">
-              <i className="fab fa-apple"></i>
-              <a href="https://ephemeral-quokka-680438.netlify.app/" target="_blank">
-                <img
-                  className="image"
-                  src="/medicinestore.png"
-                  alt="kfcImage"
-                />
-              </a>
-            </div>
-          </div>
-          <div className="face face2">
-            <div className="content">
-              <h2 className="clone">In The Progress</h2>
-              <p className="aboutweb">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
-                repudiandae, explicabo voluptate et hic cum ratione a. Officia
-                delectus illum perferendis maiores quia molestias vitae fugiat
-                aspernatur alias corporis?
-              </p>
-              <div className="tachStack">
-                <p>Javascript</p>
-                <p>HTML</p>
-                <p>CSS</p>
-                <p>React</p>
-                <p>Chakra UI</p>
-                <p>Json Server</p>
-              </div>
-              <a href="https://github.com/Adii1707/medicine-store-project" target="_blank" type="button">
-                <img
-                  className="giticon"
-                  src="https://img.icons8.com/ios-glyphs/512/github.png"
-                  alt=""
-                />
-              </a>
-              <a
-                href="https://ephemeral-quokka-680438.netlify.app/"
-                type="button"
-                target="_blank"
-              >
-                <img
-                  className="giticon redirect"
-                  src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/512/external-share-interface-kiranshastry-solid-kiranshastry.png"
-                  alt=""
-                />
-              </a>
-            </div>
-          </div>
-        </div>
+        
       </div>
       <div className="gitStats">
-        <div>{/* <GithubCalender/> */}</div>
+        <div>
+          <img src="gitcal.png" alt="image" />
+        </div>
         <div>
           <img
             src="https://github-readme-streak-stats.herokuapp.com/?user=ayush1013&"
-            alt=""
+            alt="image"
           />
         </div>
         <div>
           <img
             src="https://github-readme-stats.vercel.app/api?username=ayush1013&show_icons=true&locale=en"
-            alt=""
+            alt="image"
           />
         </div>
         <div>
           <img
             src="https://github-readme-stats.vercel.app/api/top-langs?username=ayush1013&show_icons=true&locale=en&layout=compact"
-            alt=""
+            alt="image"
           />
         </div>
       </div>
