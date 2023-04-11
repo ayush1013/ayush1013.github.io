@@ -255,7 +255,7 @@
         width: 360px;
         position: absolute;
         row-gap: 25px;
-        box-shadow:  0 0 10px #95e7fa, 0 0 500px 110px #000000;
+        box-shadow:  0 0 10px #95e7fa, 0 0 500px #000000;
         background-color: white;
         transition: 0.75;
         /* border: 1px solid black; */
