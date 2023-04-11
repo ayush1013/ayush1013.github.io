@@ -28,7 +28,7 @@
   /* position: relative; */
   /* height: 380px; */
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   row-gap: 50px;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -63,7 +63,7 @@
   box-sizing: border-box;
   margin-right: 20px;
 }
-.redirect{
+.redirect {
   border-radius: 20%;
   padding-left: 2px;
   padding-right: 2px;
@@ -176,31 +176,39 @@ a {
   /* box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5); */
 }
 
-.gitStats{
+.gitStats {
   margin-top: 100px;
   display: grid;
-  row-gap: 50px;
+  row-gap: 20px;
 }
-.gitStats div img{
+.gitStats div img {
   width: 60%;
   opacity: 0.9;
 }
+.gitImage {
+  display: flex;
+  margin: auto;
+  gap: 20px;
+  align-items: center;
+}
+.gitImage>div>img{
+  width: 400px;
+}
 
-.tachStack{
+.tachStack {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: 98%;
   margin: auto;
   column-gap: 5px;
 }
 
-.tachStack p{
+.tachStack p {
   padding: 5px;
   border-radius: 7px;
   background-color: #004458;
   font-weight: bold;
 }
-
 
 @media all and (min-width: 480px) and (max-width: 900px) {
   .Con {
@@ -247,16 +255,29 @@ a {
     margin-top: -20px;
   }
 
-  .gitStats{
-    margin-top: 60px;
+  .gitStats {
+    margin-top: 20px;
     display: grid;
     row-gap: 40px;
   }
-
+  .gitStats div img {
+    width: 80%;
+    opacity: 0.9;
+  }
+  .gitImage {
+    display: grid;
+    grid-template-columns: repeat(2,300px);
+    margin: auto;
+    gap: 20px;
+    align-items: center;
+  }
+  .gitImage>div>img{
+    width: 300px;
+  }
 }
 
 @media all and (min-width: 140px) and (max-width: 480px) {
-  body{
+  body {
     width: 480px;
   }
   .Con {
@@ -292,7 +313,7 @@ a {
     /* position: relative; */
     /* height: 1200px; */
     display: grid;
-    grid-template-columns: repeat(1,1fr);
+    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     flex-wrap: wrap;
     margin: auto;
@@ -306,9 +327,22 @@ a {
     /* border: 1px solid black; */
   }
 
-  .gitStats{
-    margin-top: 20px;
+  .gitStats {
+    margin-top: 0px;
     display: grid;
     row-gap: 20px;
+  }
+
+  .gitStats div img {
+    width: 80%;
+    opacity: 0.9;
+  }
+
+  .gitImage {
+    display: grid;
+    grid-template-columns: repeat(1,470px);
+    margin: auto;
+    gap: 20px;
+    align-items: center;
   }
 }

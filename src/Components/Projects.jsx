@@ -117,7 +117,10 @@ function Projects() {
           <div className="face face1">
             <div className="content">
               <i className="fab fa-apple"></i>
-              <a href="https://ephemeral-quokka-680438.netlify.app/" target="_blank">
+              <a
+                href="https://ephemeral-quokka-680438.netlify.app/"
+                target="_blank"
+              >
                 <img
                   className="image"
                   src="/medicinestore.png"
@@ -128,12 +131,11 @@ function Projects() {
           </div>
           <div className="face face2">
             <div className="content">
-              <h2 className="clone">In The Progress</h2>
+              <h2 className="clone">Medicine Store</h2>
               <p className="aboutweb">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde ab
-                repudiandae, explicabo voluptate et hic cum ratione a. Officia
-                delectus illum perferendis maiores quia molestias vitae fugiat
-                aspernatur alias corporis?
+                Medicine store is an e-commerce website. The site is focused on
+                providing a market place mainly for medicines and other hygiene
+                related products.
               </p>
               <div className="tachStack">
                 <p>Javascript</p>
@@ -143,7 +145,11 @@ function Projects() {
                 <p>Chakra UI</p>
                 <p>Json Server</p>
               </div>
-              <a href="https://github.com/Adii1707/medicine-store-project" target="_blank" type="button">
+              <a
+                href="https://github.com/Adii1707/medicine-store-project"
+                target="_blank"
+                type="button"
+              >
                 <img
                   className="giticon"
                   src="https://img.icons8.com/ios-glyphs/512/github.png"
@@ -216,13 +222,12 @@ function Projects() {
             </div>
           </div>
         </div>
-
-        
       </div>
       <div className="gitStats">
         <div>
-          <img src="gitcal.png" alt="image" />
+          <img src="GitCal.png" alt="image" />
         </div>
+        <div className="gitImage" >
         <div>
           <img
             src="https://github-readme-streak-stats.herokuapp.com/?user=ayush1013&"
@@ -240,6 +245,7 @@ function Projects() {
             src="https://github-readme-stats.vercel.app/api/top-langs?username=ayush1013&show_icons=true&locale=en&layout=compact"
             alt="image"
           />
+        </div>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ function About() {
         <div>
             <div className={style.container} >
                 <div className={style.profileBox} >
-                    <img src="Profile.jpg" alt="image" />
+                    <img src="/Profile.jpg" alt="image" />
                 </div>
                 <div>
                     <div className={style.about} >
@@ -15,7 +15,7 @@ function About() {
                     <div className={style.summaryBox} >
                         <p>
                             Hi there! My name is Ayush Verma an aspiring full-stack web developer skilled in DSA, HTML, CSS,
-                            Javascript, React, and Redux.
+                            Javascript, React, Redux, Node JS, Express, Mongo DB.
                         </p>
                         <br />
                         <p>
