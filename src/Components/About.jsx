@@ -6,7 +6,7 @@ function About() {
         <div>
             <div className={style.container} >
                 <div className={style.profileBox} >
-                    <img src="/Profile.jpg" alt="image" />
+                    <img src="/AyushVerma.jpg" alt="image" />
                 </div>
                 <div>
                     <div className={style.about} >

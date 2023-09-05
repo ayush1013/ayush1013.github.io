@@ -45,6 +45,7 @@
     justify-content: space-between;
     box-shadow: rgba(0, 0, 0, 0.6) 0px 30px 90px;
     z-index: 10;
+    /* border: 1px solid red; */
 }
 
 .sec1, .sec2, .sec3, .sec4, .sec5 {
