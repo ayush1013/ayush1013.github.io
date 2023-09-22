@@ -1,8 +1,13 @@
 import Navbar from "./Components/Navbar"
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 
 function App() {
+  
+  useEffect(()=>{
+    document.title="AYUSH VERMA"
+  },[])
+
   return (
     <div className="App">
       <Navbar/>
