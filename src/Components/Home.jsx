@@ -16,12 +16,23 @@ function Home() {
             <p> at Masai School, Banglore</p>
           </div>
           <div className={styles.RBut}>
-              <a 
-               className= {styles.download}
-                href="https://drive.google.com/u/0/uc?id=1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as&export=download"
+            <a
+              className={styles.download}
+              href="https://drive.google.com/u/0/uc?id=1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as&export=download"
+            >
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://drive.google.com/file/d/1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as/view?usp=sharing",
+                    "_blank",
+                    "noreferrer"
+                  )
+                }
               >
-                <button onClick={()=> window.open("https://drive.google.com/file/d/1wmufWjrLaIsUqdE_0nBDweoFlVvtq_as/view?usp=sharing", "_blank", "noreferrer")}> Resume</button>
-              </a>
+                {" "}
+                Resume
+              </button>
+            </a>
           </div>
         </div>
         <div className={styles.imgBox}>
