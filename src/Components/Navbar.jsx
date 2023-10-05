@@ -49,9 +49,29 @@ const Navbar = () => {
         top="0"
         justifyContent={"space-between"}
       >
-        <Link href="#home" fontWeight="500" fontSize={"lg"} color="#081822" >
-          Ayush Verma
-        </Link>
+        <a style={{ textDecoration: "none" }} href="#home">
+          <Flex
+            alignItems={"center"}
+            letterSpacing={"5px"}
+            href="#home"
+            fontWeight="500"
+            fontSize={{ base: "md", md: "sm", lg: "lg" }}
+            cursor="pointer"
+          >
+            <Text p="1px 2px 1px 6px" bgColor={"#0BC5EA"} color="white">
+              AYUSH
+            </Text>
+
+            <Text
+              p="0px 2px 0px 8px"
+              border="1px solid #0BC5EA"
+              borderLeft={"none"}
+              color="#0BC5EA"
+            >
+              VERMA
+            </Text>
+          </Flex>
+        </a>
         <Flex
           display={{ base: "none", md: "flex", lg: "flex" }}
           justifyContent={"space-between"}
@@ -65,42 +85,42 @@ const Navbar = () => {
         >
           <Link
             href="#home"
-            color={section === "sec1" ? "red" : "#081822"}
+            color={section === "sec1" ? "#0BC5EA" : "#081822"}
             onClick={() => handleSection("sec1")}
           >
             Home
           </Link>
           <Link
             href="#about"
-            color={section === "sec2" ? "red" : "#081822"}
+            color={section === "sec2" ? "#0BC5EA" : "#081822"}
             onClick={() => handleSection("sec2")}
           >
             About
           </Link>
           <Link
             href="#skills"
-            color={section === "sec3" ? "red" : "#081822"}
+            color={section === "sec3" ? "#0BC5EA" : "#081822"}
             onClick={() => handleSection("sec3")}
           >
             Skills
           </Link>
           <Link
             href="#projects"
-            color={section === "sec4" ? "red" : "#081822"}
+            color={section === "sec4" ? "#0BC5EA" : "#081822"}
             onClick={() => handleSection("sec4")}
           >
             Projects
           </Link>
           <Link
             href="#github"
-            color={section === "sec6" ? "red" : "#081822"}
+            color={section === "sec6" ? "#0BC5EA" : "#081822"}
             onClick={() => handleSection("sec6")}
           >
             Github
           </Link>
           <Link
             href="#contact"
-            color={section === "sec5" ? "red" : "#081822"}
+            color={section === "sec5" ? "#0BC5EA" : "#081822"}
             onClick={() => handleSection("sec5")}
           >
             Contact
@@ -160,42 +180,42 @@ const Navbar = () => {
               >
                 <Link
                   href="#home"
-                  color={section === "sec1" ? "red" : "#081822"}
+                  color={section === "sec1" ? "#0BC5EA" : "#081822"}
                   onClick={() => handleSection("sec1")}
                 >
                   Home
                 </Link>
                 <Link
                   href="#about"
-                  color={section === "sec2" ? "red" : "#081822"}
+                  color={section === "sec2" ? "#0BC5EA" : "#081822"}
                   onClick={() => handleSection("sec2")}
                 >
                   About
                 </Link>
                 <Link
                   href="#skills"
-                  color={section === "sec3" ? "red" : "#081822"}
+                  color={section === "sec3" ? "#0BC5EA" : "#081822"}
                   onClick={() => handleSection("sec3")}
                 >
                   Skills
                 </Link>
                 <Link
                   href="#projects"
-                  color={section === "sec4" ? "red" : "#081822"}
+                  color={section === "sec4" ? "#0BC5EA" : "#081822"}
                   onClick={() => handleSection("sec4")}
                 >
                   Projects
                 </Link>
                 <Link
                   href="#github"
-                  color={section === "sec6" ? "red" : "#081822"}
+                  color={section === "sec6" ? "#0BC5EA" : "#081822"}
                   onClick={() => handleSection("sec6")}
                 >
                   Github
                 </Link>
                 <Link
                   href="#contact"
-                  color={section === "sec5" ? "red" : "#081822"}
+                  color={section === "sec5" ? "#0BC5EA" : "#081822"}
                   onClick={() => handleSection("sec5")}
                 >
                   Contact
