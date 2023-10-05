@@ -131,7 +131,7 @@ const Navbar = () => {
           display={{ base: "box", md: "none", lg: "none" }}
           ml="5px"
         >
-          <Image src="icons8-menu-50.png" w="32px" />
+          <Image src="icons8-menu-50.png" w="26px" />
         </Box>
 
         <Drawer
@@ -150,6 +150,7 @@ const Navbar = () => {
                 flexDirection="column"
                 justifyContent={"space-between"}
                 ml={{ base: "10%", md: "10%", lg: "16%" }}
+                mt="50px"
                 cursor={"pointer"}
                 fontWeight="500"
                 // border="1px solid black"
@@ -159,35 +160,42 @@ const Navbar = () => {
               >
                 <Link
                   href="#home"
-                  color={section === "sec1" ? "teal" : "black"}
+                  color={section === "sec1" ? "red" : "#081822"}
                   onClick={() => handleSection("sec1")}
                 >
                   Home
                 </Link>
                 <Link
                   href="#about"
-                  color={section === "sec2" ? "teal" : "black"}
+                  color={section === "sec2" ? "red" : "#081822"}
                   onClick={() => handleSection("sec2")}
                 >
                   About
                 </Link>
                 <Link
                   href="#skills"
-                  color={section === "sec3" ? "teal" : "black"}
+                  color={section === "sec3" ? "red" : "#081822"}
                   onClick={() => handleSection("sec3")}
                 >
                   Skills
                 </Link>
                 <Link
                   href="#projects"
-                  color={section === "sec4" ? "teal" : "black"}
+                  color={section === "sec4" ? "red" : "#081822"}
                   onClick={() => handleSection("sec4")}
                 >
                   Projects
                 </Link>
                 <Link
+                  href="#github"
+                  color={section === "sec6" ? "red" : "#081822"}
+                  onClick={() => handleSection("sec6")}
+                >
+                  Github
+                </Link>
+                <Link
                   href="#contact"
-                  color={section === "sec5" ? "teal" : "black"}
+                  color={section === "sec5" ? "red" : "#081822"}
                   onClick={() => handleSection("sec5")}
                 >
                   Contact
