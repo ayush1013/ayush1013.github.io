@@ -40,7 +40,7 @@ const About = () => {
           flexDirection={"column"}
           // border="1px solid black"
           mt={{ base: "20px", md: "0", lg: "0" }}
-          gap="15px"
+          gap={{ base: "8px", md: "15px", lg: "15px" }}
           fontSize={{ base: "14px", md: "14px", lg: "18px" }}
           fontWeight={"500"}
           justifyContent={"center"}

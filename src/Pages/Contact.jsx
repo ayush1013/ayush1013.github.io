@@ -15,12 +15,12 @@ const connections = [
   {
     title: "ayush98277@gmail.com",
     image: "icons8-email-48.png",
-    redirect: "",
+    redirect: "mailto:ayush98277@gmail.com",
   },
   {
     title: "+91 8103313529",
     image: "icons8-contact-58.png",
-    redirect: "",
+    redirect: "tel:8103313529",
   },
   {
     title: "Follow me on Github",
@@ -41,20 +41,24 @@ const connections = [
 
 const Contact = () => {
   const [hide, setHide] = useState({ number: false, email: false });
-  const [copied, setCopied] = useState(false);
+  const [copied, setCopied] = useState({ number: false, email: false });
 
   const handleCopyClick = (title) => {
     navigator.clipboard.writeText(title);
-    setCopied(true);
+    if (title === "ayush98277@gmail.com") {
+      setCopied({ ...copied, email: true });
+    } else if (title === "+91 8103313529") {
+      setCopied({ ...copied, number: true });
+    }
     setTimeout(() => {
-      setCopied(false);
+      setCopied({ number: false, email: false });
     }, 1000); // Reset the copied state after 2 seconds
   };
 
   const handleHover = (t) => {
-    if (t == "+91 8103313529") {
+    if (t === "+91 8103313529") {
       setHide({ ...hide, number: true });
-    } else if (t == "ayush98277@gmail.com") {
+    } else if (t === "ayush98277@gmail.com") {
       setHide({ ...hide, email: true });
     }
   };
@@ -162,9 +166,6 @@ const Contact = () => {
         m="auto"
         mt="40px"
       >
-        {/* <Heading size="sm" color="purple">
-          Contact Details
-        </Heading> */}
         <Flex justifyContent={"space-between"} mt="10px" flexWrap="wrap">
           <Flex
             w="fit-content"
@@ -173,6 +174,7 @@ const Contact = () => {
             color="grey.400"
             fontSize={"sm"}
             fontWeight={"500"}
+            cursor={"pointer"}
             // border="1px solid black"
           >
             <Image
@@ -181,8 +183,11 @@ const Contact = () => {
               onMouseOver={() => handleHover(connections[0].title)}
               onMouseOut={handleMouseOut}
             />
-            <Text display={{ base: "none", md: "block", lg: "block" }}>
-              {connections[0].title}{" "}
+            <Text
+              display={{ base: "none", md: "block", lg: "block" }}
+              onClick={() => handleCopyClick(connections[0].title)}
+            >
+              {copied.email ? "Copied!" : connections[0].title}
             </Text>
             <Text
               display={{
@@ -194,7 +199,7 @@ const Contact = () => {
               onMouseOut={handleMouseOut}
               onClick={() => handleCopyClick(connections[0].title)}
             >
-              {copied ? "Copied!" : connections[0].title}
+              {copied.email ? "Copied!" : connections[0].title}
             </Text>
           </Flex>
 
@@ -205,6 +210,7 @@ const Contact = () => {
             color="grey.400"
             fontSize={"sm"}
             fontWeight={"500"}
+            cursor={"pointer"}
             // border="1px solid black"
             pl={"2px"}
           >
@@ -214,8 +220,11 @@ const Contact = () => {
               onMouseOver={() => handleHover(connections[1].title)}
               onMouseOut={handleMouseOut}
             />
-            <Text display={{ base: "none", md: "block", lg: "block" }}>
-              {connections[1].title}{" "}
+            <Text
+              display={{ base: "none", md: "block", lg: "block" }}
+              onClick={() => handleCopyClick(connections[1].title)}
+            >
+              {copied.number ? "Copied" : connections[1].title}
             </Text>
             <Text
               display={{
@@ -227,7 +236,7 @@ const Contact = () => {
               onMouseOut={handleMouseOut}
               onClick={() => handleCopyClick(connections[1].title)}
             >
-              {copied ? "Copied" : connections[1].title}
+              {copied.number ? "Copied" : connections[1].title}
             </Text>
           </Flex>
 
