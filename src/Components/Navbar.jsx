@@ -28,6 +28,11 @@ const Navbar = () => {
   const [section, setSection] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
+  const [darkMode, setDarkMode] = useState(false);
+
+  const handleDarkMode = () => {
+    setDarkMode(!darkMode);
+  };
 
   const handleSection = (sec) => {
     setSection(sec);
@@ -265,6 +270,23 @@ const Navbar = () => {
         <section id="contact">
           <Contact />
         </section>
+      </Box>
+
+      <Box
+        p="2px"
+        borderRadius="50%"
+        bgColor={darkMode ? "cyan.400" : "gray.800"}
+        cursor="pointer"
+        position={"fixed"}
+        zIndex={"10"}
+        top={{ base: "60px", md: "80px", lg: "90px" }}
+        right={{ base: "10px", md: "20px", lg: "20px" }}
+        onClick={handleDarkMode}
+      >
+        <Image
+          w={{ base: "28px", md: "35px", lg: "35px" }}
+          src={darkMode ? "icons8-sun-96.png" : "icons8-moon-96.png"}
+        />
       </Box>
     </Box>
   );
