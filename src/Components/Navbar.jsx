@@ -282,13 +282,13 @@ const Navbar = () => {
 
       <Box
         p="2px"
-        borderRadius="50%"
+        borderRadius="50% 0% 0% 50%"
         bgColor={darkMode ? "cyan.400" : "gray.800"}
         cursor="pointer"
         position={"fixed"}
         zIndex={"10"}
         top={{ base: "60px", md: "80px", lg: "90px" }}
-        right={{ base: "10px", md: "20px", lg: "20px" }}
+        right={{ base: "0px", md: "0px", lg: "0px" }}
         onClick={handleDarkMode}
       >
         <Image
