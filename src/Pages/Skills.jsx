@@ -61,7 +61,7 @@ const tools = [
   },
 ];
 
-const Skills = () => {
+const Skills = ({ darkMode }) => {
   return (
     <Box
       h={{ base: "390px", md: "500px", lg: "592px" }}
@@ -74,13 +74,18 @@ const Skills = () => {
         lg: "1px dashed #0BC5EA",
       }}
     >
-      <Heading fontSize={{ base: "20px", md: "20px", lg: "30px" }}>
+      <Heading
+        fontSize={{ base: "20px", md: "20px", lg: "30px" }}
+        color={darkMode ? "#F0F3F7" : "black"}
+      >
         Skills
       </Heading>
 
-      <Marquee  autoFill direction="right" >
+      <Marquee autoFill direction="right">
         {skills.map((elem) => (
           <Box
+            bgColor={darkMode ? "#053066" : "white"}
+            color={darkMode ? "#F0F3F7" : "#242A35"}
             shadow={{ base: "md", md: "lg", lg: "lg" }}
             m={{ base: "10px 10px", md: "20px 30px", lg: "20px 30px" }}
             mt={{ base: "10px", md: "40px", lg: "40px" }}
@@ -101,6 +106,8 @@ const Skills = () => {
       <Marquee marginTop="20px" style={{ marginTop: "20px" }} autoFill>
         {tools.map((elem) => (
           <Box
+            bgColor={darkMode ? "#053066" : "white"}
+            color={darkMode ? "#F0F3F7" : "#242A35"}
             shadow={{ base: "md", md: "lg", lg: "lg" }}
             m={{ base: "10px 10px", md: "20px 30px", lg: "20px 30px" }}
             mt={{ base: "10px", md: "40px", lg: "40px" }}

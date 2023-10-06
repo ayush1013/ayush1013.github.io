@@ -1,9 +1,7 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
-const darkMode = JSON.parse(localStorage.getItem("darkMode")) || false;
-
-const About = () => {
+const About = ({ darkMode }) => {
   return (
     <Box
       h={{ base: "780px", md: "450px", lg: "592px" }}
@@ -16,11 +14,15 @@ const About = () => {
         lg: "1px dashed #0BC5EA",
       }}
     >
-      <Heading fontSize={{ base: "20px", md: "20px", lg: "30px" }}>
+      <Heading
+        fontSize={{ base: "20px", md: "20px", lg: "30px" }}
+        color={darkMode ? "#F0F3F7" : "black"}
+      >
         {" "}
         About Me{" "}
       </Heading>
       <Flex
+        color={darkMode ? "#F0F3F7" : "black"}
         w={{ base: "100%", md: "90%", lg: "90%" }}
         m="auto"
         // border="1px solid black"
@@ -30,7 +32,7 @@ const About = () => {
         flexDirection={{ base: "column", md: "row", lg: "row" }}
       >
         <Box
-          bgColor="#0BC5EA"
+           bgColor={darkMode ? "#053066" : "#0BC5EA"}
           w={{ base: "70%", md: "28%", lg: "28%" }}
           h="fit-content"
           borderRadius="50%"

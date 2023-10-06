@@ -48,14 +48,14 @@ const Navbar = () => {
   };
 
   return (
-    <Box position="relative" bgColor={darkMode?"#262F3A":"white"} >
+    <Box position="relative" bgColor={darkMode?"#03182D":"white"} >
       <Flex
         h={{ base: "50px", md: "60px", lg: "65px" }}
         w="100%"
         alignItems={"center"}
         pl={{ base: "10px", md: "40px", lg: "80px" }}
         pr={{ base: "10px", md: "40px", lg: "80px" }}
-        bgColor={darkMode?"#262F3A":"white"} 
+        bgColor={darkMode?"#13446F":"white"} 
         boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px"
         zIndex={10}
         position={"fixed"}
@@ -193,7 +193,7 @@ const Navbar = () => {
               >
                 <Link
                   href="#home"
-                  color={section === "sec1" ? "#0BC5EA" : "#081822"}
+                  color={section === "sec1" ? (darkMode? "#0BC5EA":"#F0F3F7") : "#081822"}
                   onClick={() => handleSection("sec1")}
                 >
                   Home
@@ -264,19 +264,19 @@ const Navbar = () => {
           <Home darkMode={darkMode} />
         </section>
         <section id="about">
-          <About />
+          <About darkMode={darkMode} />
         </section>
         <section id="skills">
-          <Skills />
+          <Skills darkMode={darkMode} />
         </section>
         <section id="projects">
-          <Projects />
+          <Projects darkMode={darkMode} />
         </section>
         <section id="github">
-          <GitStats />
+          <GitStats darkMode={darkMode} />
         </section>
         <section id="contact">
-          <Contact />
+          <Contact darkMode={darkMode} />
         </section>
       </Box>
 
