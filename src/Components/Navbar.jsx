@@ -16,7 +16,7 @@ import {
   Text,
   useDisclosure,
 } from "@chakra-ui/react";
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Home from "../Pages/Home";
 import About from "../Pages/About";
 import Skills from "../Pages/Skills";
@@ -24,15 +24,23 @@ import Projects from "../Pages/Projects";
 import Contact from "../Pages/Contact";
 import GitStats from "../Pages/GitStats";
 
+const initialMode = JSON.parse(localStorage.getItem("darkMode")) || false;
+
 const Navbar = () => {
   const [section, setSection] = useState("");
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = useRef();
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(initialMode);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
+    // window.location.reload();
   };
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+    
+  }, [darkMode]);
 
   const handleSection = (sec) => {
     setSection(sec);
@@ -40,14 +48,14 @@ const Navbar = () => {
   };
 
   return (
-    <Box position="relative">
+    <Box position="relative" bgColor={darkMode?"#262F3A":"white"} >
       <Flex
         h={{ base: "50px", md: "60px", lg: "65px" }}
         w="100%"
         alignItems={"center"}
         pl={{ base: "10px", md: "40px", lg: "80px" }}
         pr={{ base: "10px", md: "40px", lg: "80px" }}
-        bgColor="white"
+        bgColor={darkMode?"#262F3A":"white"} 
         boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px"
         zIndex={10}
         position={"fixed"}
@@ -253,7 +261,7 @@ const Navbar = () => {
 
       <Box>
         <section id="home">
-          <Home />
+          <Home darkMode={darkMode} />
         </section>
         <section id="about">
           <About />

@@ -1,7 +1,9 @@
 import { Box, Button, Flex, Image, Link, Text } from "@chakra-ui/react";
 import React from "react";
 
-const Home = () => {
+// const darkMode = JSON.parse(localStorage.getItem("darkMode")) || false;
+
+const Home = ({darkMode}) => {
   return (
     <Box
       h={{ base: "100vh", md: "450px", lg: "592px" }}
@@ -35,12 +37,15 @@ const Home = () => {
             textAlign={"left"}
             // border="1px solid black"
           >
-            <Text fontSize={{ base: "32px", md: "32px", lg: "50px" }}>
+            <Text
+              fontSize={{ base: "32px", md: "32px", lg: "50px" }}
+              color={darkMode ? "#F0F3F7" : "black"}
+            >
               I'm Ayush Verma
             </Text>
             <Text
               fontSize={{ base: "14px", md: "14px", lg: "20px" }}
-              color={"#00ACD5"}
+              color={darkMode ? "#10111A" : "#00ACD5"}
             >
               Aspiring Full Stack Web Developer
             </Text>
@@ -85,7 +90,7 @@ const Home = () => {
         </Box>
 
         <Box
-          bgColor="#0BC5EA"
+          bgColor={darkMode ? "#10111A" : "#0BC5EA"}
           w={{ base: "100%", md: "50%", lg: "50%" }}
           h={{ base: "60%", md: "100%", lg: "100%" }}
           overflow={"hidden"}

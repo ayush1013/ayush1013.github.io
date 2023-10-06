@@ -1,6 +1,8 @@
 import { Box, Flex, Heading, Image, Text } from "@chakra-ui/react";
 import React from "react";
 
+const darkMode = JSON.parse(localStorage.getItem("darkMode")) || false;
+
 const About = () => {
   return (
     <Box
