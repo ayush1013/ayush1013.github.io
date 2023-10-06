@@ -54,7 +54,7 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const Projects = ({ darkMode }) => {
   return (
     <Box
       h={{ base: "fit-content", md: "fit-content", lg: "fit-content" }}
@@ -68,7 +68,10 @@ const Projects = () => {
         lg: "1px dashed #0BC5EA",
       }}
     >
-      <Heading fontSize={{ base: "20px", md: "20px", lg: "30px" }}>
+      <Heading
+        fontSize={{ base: "20px", md: "20px", lg: "30px" }}
+        color={darkMode ? "#F0F3F7" : "black"}
+      >
         Projects
       </Heading>
 
@@ -76,7 +79,11 @@ const Projects = () => {
         w={{ base: "95%", md: "90%", lg: "80%" }}
         gap={{ base: "30px", md: "40px", lg: "50px" }}
         rowGap={{ base: "20px", md: "40px", lg: "40px" }}
-        gridTemplateColumns={{ base: "repeat(1,1fr)", md: "repeat(2,1fr)", lg: "repeat(2,1fr)" }}
+        gridTemplateColumns={{
+          base: "repeat(1,1fr)",
+          md: "repeat(2,1fr)",
+          lg: "repeat(2,1fr)",
+        }}
         m="auto"
         mt={{ base: "20px", md: "40px", lg: "40px" }}
       >
@@ -87,22 +94,27 @@ const Projects = () => {
             p="10px"
             pb="50px"
             borderRadius={"10px"}
-            bgColor="#E2EAEE"
-            color="#2E353B"
+            bgColor={darkMode ? "#5E6D86" : "#E2EAEE"}
+            color={darkMode ? "#F0F3F7" : "#2E353B"}
             position={"relative"}
           >
-            <Link href={elem.liveLink} target="_blank" >
-            <Image w="100%" m="auto" src={elem.image} shadow={"md"} borderTopRadius={"10px"} />
+            <Link href={elem.liveLink} target="_blank">
+              <Image
+                w="100%"
+                m="auto"
+                src={elem.image}
+                shadow={"md"}
+                borderTopRadius={"10px"}
+              />
             </Link>
             <Box mt="10px" textAlign={"left"}>
               <Text
                 fontWeight="500"
                 fontSize={{ base: "16px", md: "20px", lg: "20px" }}
-                color="#2E353B"
               >
                 {elem.title}
               </Text>
-              <Text color="#2E353B" fontSize="14px">
+              <Text  fontSize="14px">
                 {elem.discription}
               </Text>
 
@@ -124,12 +136,18 @@ const Projects = () => {
                 </Box>
               </Flex>
             </Box>
-            <Flex gap="20px" position={"absolute"} zindex="1" bottom={"10px"} right="10px"  >
-              <Link href={elem.githubLink} target="_blank" >
-              <Image src="icons8-github-100.png" w="32px" />
+            <Flex
+              gap="20px"
+              position={"absolute"}
+              zindex="1"
+              bottom={"10px"}
+              right="10px"
+            >
+              <Link href={elem.githubLink} target="_blank">
+                <Image src="icons8-github-100.png" w="32px" />
               </Link>
-              <Link href={elem.liveLink} target="_blank" >
-              <Image src="icons8-share-64.png" w="32px" />
+              <Link href={elem.liveLink} target="_blank">
+                <Image src="icons8-share-64.png" w="32px" />
               </Link>
             </Flex>
           </Box>

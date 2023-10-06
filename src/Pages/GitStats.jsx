@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Image } from "@chakra-ui/react";
 import React from "react";
 import GithubCalendar from "../Components/GithubCalendar";
 
-const GitStats = () => {
+const GitStats = ({ darkMode }) => {
   return (
     <Box
       h={{ base: "fit-content", md: "fit-content", lg: "fit-content" }}
@@ -16,7 +16,10 @@ const GitStats = () => {
         lg: "1px dashed #0BC5EA",
       }}
     >
-      <Heading fontSize={{ base: "20px", md: "20px", lg: "30px" }}>
+      <Heading
+        fontSize={{ base: "20px", md: "20px", lg: "30px" }}
+        color={darkMode ? "#F0F3F7" : "black"}
+      >
         Github Stats
       </Heading>
 
@@ -29,10 +32,12 @@ const GitStats = () => {
         flexDirection={{ base: "column", md: "row", lg: "row" }}
         rowGap={"20px"}
       >
-        <GithubCalendar />
+        <GithubCalendar darkMode={darkMode} />
         <Image
-            w={{ base: "95%", md: "50%", lg: "50%" }}
-            src="https://github-readme-stats.vercel.app/api?username=ayush1013&show_icons=true&locale=en"
+          w={{ base: "95%", md: "50%", lg: "50%" }}
+          src={`https://github-readme-stats.vercel.app/api?username=ayush1013&show_icons=true&locale=en&theme=${
+            darkMode ? "nord" : "none"
+          }`}
           alt="image"
         />
       </Flex>
@@ -46,13 +51,17 @@ const GitStats = () => {
         rowGap={"20px"}
       >
         <Image
-            w={{ base: "95%", md: "50%", lg: "50%" }}
-          src="https://github-readme-streak-stats.herokuapp.com/?user=ayush1013&"
+          w={{ base: "95%", md: "50%", lg: "50%" }}
+          src={`https://github-readme-streak-stats.herokuapp.com/?user=ayush1013&theme=${
+            darkMode ? "nord" : "none"
+          }`}
           alt="image"
         />
         <Image
-        w={{ base: "95%", md: "40%", lg: "40%" }}
-          src="https://github-readme-stats.vercel.app/api/top-langs?username=ayush1013&show_icons=true&locale=en&layout=compact"
+          w={{ base: "95%", md: "40%", lg: "40%" }}
+          src={`https://github-readme-stats.vercel.app/api/top-langs?username=ayush1013&show_icons=true&locale=en&layout=compact&theme=${
+            darkMode ? "nord" : "none"
+          }`}
           alt="image"
         />
       </Flex>

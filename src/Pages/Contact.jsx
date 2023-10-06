@@ -39,7 +39,7 @@ const connections = [
   },
 ];
 
-const Contact = () => {
+const Contact = ({ darkMode }) => {
   const [hide, setHide] = useState({ number: false, email: false });
   const [copied, setCopied] = useState({ number: false, email: false });
 
@@ -80,7 +80,10 @@ const Contact = () => {
         lg: "1px dashed #0BC5EA",
       }}
     >
-      <Heading fontSize={{ base: "20px", md: "20px", lg: "30px" }}>
+      <Heading
+        fontSize={{ base: "20px", md: "20px", lg: "30px" }}
+        color={darkMode ? "#F0F3F7" : "black"}
+      >
         Contact Me
       </Heading>
 
@@ -166,7 +169,12 @@ const Contact = () => {
         m="auto"
         mt="40px"
       >
-        <Flex justifyContent={"space-between"} mt="10px" flexWrap="wrap">
+        <Flex
+          justifyContent={"space-between"}
+          mt="10px"
+          flexWrap="wrap"
+          color={darkMode ? "#F0F3F7" : "grey.400"}
+        >
           <Flex
             w="fit-content"
             gap={{ base: "0px", md: "10px", lg: "10px" }}
@@ -252,7 +260,7 @@ const Contact = () => {
                 w="fit-content"
                 gap="10px"
                 alignItems={"center"}
-                color="grey.400"
+                color={darkMode ? "#F0F3F7" : "grey.400"}
                 fontSize={"sm"}
                 fontWeight={"500"}
                 // border="1px solid black"

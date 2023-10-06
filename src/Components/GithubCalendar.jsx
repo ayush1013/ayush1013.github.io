@@ -2,7 +2,7 @@ import { Box } from "@chakra-ui/react";
 import React from "react";
 import GitHubCalendar from "react-github-calendar";
 
-const GithubCalendar = () => {
+const GithubCalendar = ({ darkMode }) => {
   const selectLastHalfYear = (contributions) => {
     const currentYear = new Date().getFullYear();
     const currentMonth = new Date().getMonth();
@@ -27,8 +27,10 @@ const GithubCalendar = () => {
       border="1px solid #E4E2E2"
       borderRadius={"7px"}
       w="fit-content"
-      p="10px"
-      pr="20px"
+      p="20px"
+      pr="40px"
+      color={darkMode ? "#D8DEE9" : "black"}
+      bgColor={darkMode ? "#2E3440" : "white"}
     >
       <GitHubCalendar
         username="ayush1013"
