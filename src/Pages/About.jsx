@@ -32,7 +32,7 @@ const About = ({ darkMode }) => {
         flexDirection={{ base: "column", md: "row", lg: "row" }}
       >
         <Box
-           bgColor={darkMode ? "#053066" : "#0BC5EA"}
+          bgColor={darkMode ? "#053066" : "#0BC5EA"}
           w={{ base: "70%", md: "28%", lg: "28%" }}
           h="fit-content"
           borderRadius="50%"
