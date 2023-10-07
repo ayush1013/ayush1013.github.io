@@ -8,7 +8,9 @@ import {
   Link,
   Text,
   Textarea,
+  useToast,
 } from "@chakra-ui/react";
+import axios from "axios";
 import React, { useState } from "react";
 
 const connections = [
@@ -39,9 +41,44 @@ const connections = [
   },
 ];
 
+const initialMessage = {
+  name: "",
+  email: "",
+  content: "",
+};
+
+const postMessage = (payload) => {
+  axios
+    .post("https://rich-lime-ray-coat.cyclic.app/api/message", payload)
+    .then((res) => {
+      console.log(res);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
+
 const Contact = ({ darkMode }) => {
   const [hide, setHide] = useState({ number: false, email: false });
   const [copied, setCopied] = useState({ number: false, email: false });
+  const [message, setMessage] = useState(initialMessage);
+  const toast = useToast();
+
+  const handleChange = (e) => {
+    setMessage({ ...message, [e.targer.name]: e.targer.value });
+  };
+
+  const handleMessage = (e) => {
+    e.preventDefault();
+    postMessage(message).then((res) => {
+      toast({
+        title: "Your message has been sent",
+        status: "success",
+        colorScheme: "success",
+        duration: 3000,
+      });
+    });
+  };
 
   const handleCopyClick = (title) => {
     navigator.clipboard.writeText(title);
@@ -102,6 +139,7 @@ const Contact = ({ darkMode }) => {
         />
         <Box w={{ base: "100%", md: "42%", lg: "42%" }}>
           <form
+            onSubmit={handleMessage}
             style={{
               display: "flex",
               flexDirection: "column",
@@ -111,6 +149,9 @@ const Contact = ({ darkMode }) => {
             }}
           >
             <Input
+              onChange={handleChange}
+              name="name"
+              value={message.name}
               placeholder="Your Name"
               shadow={"md"}
               fontSize={"sm"}
@@ -123,6 +164,9 @@ const Contact = ({ darkMode }) => {
               }}
             />
             <Input
+              onChange={handleChange}
+              name="email"
+              value={message.email}
               placeholder="Your Email"
               shadow={"md"}
               fontSize={"sm"}
@@ -136,6 +180,9 @@ const Contact = ({ darkMode }) => {
               }}
             />
             <Textarea
+              onChange={handleChange}
+              name="content"
+              value={message.content}
               variant={"unstyled"}
               shadow={"md"}
               fontSize={"sm"}
@@ -150,6 +197,7 @@ const Contact = ({ darkMode }) => {
               }}
             />
             <Button
+              type="submit"
               // w="fit-content"
               size="sm"
               colorScheme="purple"
