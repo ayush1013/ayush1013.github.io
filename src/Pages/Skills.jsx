@@ -82,8 +82,9 @@ const Skills = ({ darkMode }) => {
       </Heading>
 
       <Marquee autoFill direction="right">
-        {skills.map((elem) => (
+        {skills.map((elem, i) => (
           <Box
+            key={i}
             bgColor={darkMode ? "#053066" : "white"}
             color={darkMode ? "#F0F3F7" : "#242A35"}
             shadow={{ base: "md", md: "lg", lg: "lg" }}

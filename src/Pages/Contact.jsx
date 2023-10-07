@@ -47,17 +47,6 @@ const initialMessage = {
   content: "",
 };
 
-const postMessage = (payload) => {
-  axios
-    .post("https://rich-lime-ray-coat.cyclic.app/api/message", payload)
-    .then((res) => {
-      console.log(res);
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-};
-
 const Contact = ({ darkMode }) => {
   const [hide, setHide] = useState({ number: false, email: false });
   const [copied, setCopied] = useState({ number: false, email: false });
@@ -65,19 +54,35 @@ const Contact = ({ darkMode }) => {
   const toast = useToast();
 
   const handleChange = (e) => {
-    setMessage({ ...message, [e.targer.name]: e.targer.value });
+    setMessage({ ...message, [e.target.name]: e.target.value });
   };
 
   const handleMessage = (e) => {
     e.preventDefault();
-    postMessage(message).then((res) => {
-      toast({
-        title: "Your message has been sent",
-        status: "success",
-        colorScheme: "success",
-        duration: 3000,
-      });
-    });
+    console.log("message", message);
+
+    const postMessage = (payload) => {
+      axios
+        .post("https://rich-lime-ray-coat.cyclic.app/api/message", payload)
+        .then((res) => {
+          console.log(res);
+        })
+        .then((res) => {
+          alert("Your message has been sent");
+          setMessage({ ...message, content: "" });
+          // toast({
+          //   title: "Your message has been sent",
+          //   status: "success",
+          //   colorScheme: "success",
+          //   duration: 3000,
+          // });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
+    postMessage(message);
   };
 
   const handleCopyClick = (title) => {
