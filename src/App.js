@@ -1,6 +1,6 @@
 import "./App.css";
-import Navbar from "./Components/Navbar";
 import { useEffect } from "react";
+import AllRoutes from "./Routes/AllRoutes";
 
 function App() {
   useEffect(() => {
@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="App">
-      <Navbar />
+      <AllRoutes/>
     </div>
   );
 }
