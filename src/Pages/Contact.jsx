@@ -68,21 +68,31 @@ const Contact = ({ darkMode }) => {
           console.log(res);
         })
         .then((res) => {
-          alert("Your message has been sent");
+          toast({
+            title: 'Your message has been sent',
+            status: 'success',
+            duration: 2000,
+            position: "top",
+            isClosable: true,
+          })
           setMessage({ ...message, content: "" });
-          // toast({
-          //   title: "Your message has been sent",
-          //   status: "success",
-          //   colorScheme: "success",
-          //   duration: 3000,
-          // });
         })
         .catch((err) => {
           console.log(err);
         });
     };
 
-    postMessage(message);
+    if (message.name !== "" && message.content !== "" && message.email !== "") {
+      postMessage(message);
+    } else {
+      toast({
+        title: 'Please fill all the required fields.',
+        status: 'info',
+        duration: 2000,
+        position: "top",
+        isClosable: true,
+      })
+    }
   };
 
   const handleCopyClick = (title) => {
