@@ -78,7 +78,7 @@ const Contact = ({ darkMode }) => {
             position: "top",
             isClosable: true,
           });
-          setMessage({ ...message, content: "" });
+          setMessage({ ...message, name: "", email: "", content: "" });
         })
         .catch((err) => {
           setIsLoading(false);
@@ -330,7 +330,7 @@ const Contact = ({ darkMode }) => {
               href={elem.redirect && elem.redirect}
               target={elem.redirect && "_blank"}
               w="fit-content"
-              display={i == 0 || i == 1 ? "none" : "block"}
+              display={i === 0 || i === 1 ? "none" : "block"}
             >
               <Flex
                 w="fit-content"
