@@ -51,6 +51,7 @@ const Contact = ({ darkMode }) => {
   const [hide, setHide] = useState({ number: false, email: false });
   const [copied, setCopied] = useState({ number: false, email: false });
   const [message, setMessage] = useState(initialMessage);
+  const [isLoading, setIsLoading] = useState(false);
   const toast = useToast();
 
   const handleChange = (e) => {
@@ -62,22 +63,33 @@ const Contact = ({ darkMode }) => {
     console.log("message", message);
 
     const postMessage = (payload) => {
+      setIsLoading(true);
       axios
         .post("https://rich-lime-ray-coat.cyclic.app/api/message", payload)
         .then((res) => {
           console.log(res);
+          setIsLoading(false);
         })
         .then((res) => {
           toast({
-            title: 'Your message has been sent',
-            status: 'success',
+            title: "Your message has been sent",
+            status: "success",
             duration: 2000,
             position: "top",
             isClosable: true,
-          })
+          });
           setMessage({ ...message, content: "" });
         })
         .catch((err) => {
+          setIsLoading(false);
+
+          toast({
+            title: "Could not send message please try again",
+            status: "error",
+            duration: 2000,
+            position: "top",
+            isClosable: true,
+          });
           console.log(err);
         });
     };
@@ -86,12 +98,12 @@ const Contact = ({ darkMode }) => {
       postMessage(message);
     } else {
       toast({
-        title: 'Please fill all the required fields.',
-        status: 'info',
+        title: "Please fill all the required fields.",
+        status: "info",
         duration: 2000,
         position: "top",
         isClosable: true,
-      })
+      });
     }
   };
 
@@ -217,8 +229,9 @@ const Contact = ({ darkMode }) => {
               size="sm"
               colorScheme="purple"
               shadow={"md"}
+              isLoading={isLoading}
             >
-              Send
+              {isLoading ? "Sending..." : "Send"}
             </Button>
           </form>
         </Box>
