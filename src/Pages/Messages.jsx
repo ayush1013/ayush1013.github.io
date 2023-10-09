@@ -6,17 +6,21 @@ import { useEffect, useState } from "react";
 const Messages = () => {
   const [msgData, setMsgData] = useState([]);
   const [singleMessage, setSingleMessage] = useState([]);
+  const [name, setName] = useState("");
 
   // console.log("msgData: ", msgData);
 
   const handleSigleMessage = (id) => {
     const initialMessage =
       msgData.length > 0 && msgData.filter((elem) => elem._id === id);
-    console.log("initialMessage",initialMessage);
+    console.log("initialMessage", initialMessage);
     if (initialMessage.length > 0) {
       setSingleMessage(initialMessage[0].content);
+      setName(initialMessage[0].name);
     }
     console.log("singleMessage", singleMessage);
+    console.log("name", name);
+    // console.log("content")
   };
 
   useEffect(() => {
@@ -45,12 +49,14 @@ const Messages = () => {
         bgColor="gray.500"
         zIndex="10"
         color="white"
+        position={"fixed"}
+        top="0"
       >
         <Text fontSize={"lg"} fontWeight={"500"}>
           Portfolio Feedback & Messages
         </Text>
       </Flex>
-      <Flex w="100%" h="100vh" color="white">
+      <Flex w="100%" h="100vh" color="white" pt="50px">
         <Box w="20%" h="100%" bgColor="gray.800">
           <Flex
             justifyContent={"center"}
@@ -87,7 +93,7 @@ const Messages = () => {
               ))}
           </Flex>
         </Box>
-        <Box w="80%" bgColor="gray.600" h="100%">
+        <Box w="80%" bgColor="gray.600" h="100%" position="relative">
           <Flex
             justifyContent={"center"}
             alignItems={"center"}
@@ -95,7 +101,30 @@ const Messages = () => {
             bgColor="gray.600"
             shadow={"lg"}
           >
-            <Text>Messaging History</Text>
+            <Text>{singleMessage?.length > 0 ? name : "Messaging History"}</Text>
+          </Flex>
+          <Flex
+            flexDir="column"
+            gap="5px"
+            h="fit-content"
+            position={"absolute"}
+            bottom="10px"
+            left="10px"
+          >
+            {singleMessage.length > 0 &&
+              singleMessage?.map((elem) => (
+                <Flex
+                  key={elem.id}
+                  shadow={"md"}
+                  borderRadius="10px"
+                  w="fit-content"
+                  p="5px"
+                  ml="10px"
+                  alignItems={"center"}
+                >
+                  <Text w="fit-content">{elem.content}</Text>
+                </Flex>
+              ))}
           </Flex>
         </Box>
       </Flex>
