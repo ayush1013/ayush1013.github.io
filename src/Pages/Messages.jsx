@@ -1,7 +1,28 @@
 import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import axios from "axios";
 import React from "react";
+import { useEffect, useState } from "react";
 
 const Messages = () => {
+  const [msgData, setMsgData] = useState([]);
+
+  console.log("msgData: ", msgData);
+
+  useEffect(() => {
+    const getData = () => {
+      axios
+        .get("https://rich-lime-ray-coat.cyclic.app/api/messages")
+        .then((res) => {
+          console.log(res.data);
+          setMsgData(res.data.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+    getData();
+  }, []);
+
   return (
     <Box>
       <Flex
@@ -28,6 +49,13 @@ const Messages = () => {
             shadow={"lg"}
           >
             <Text>Message Contacts</Text>
+          </Flex>
+          <Flex flexDirection={"column"}>
+            {
+                msgData.length>0 && msgData.map((elem)=>(
+                    
+                ))
+            }
           </Flex>
         </Box>
         <Box w="80%" bgColor="gray.600" h="100%">
