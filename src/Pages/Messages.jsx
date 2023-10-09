@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
 import axios from "axios";
 import React from "react";
 import { useEffect, useState } from "react";
@@ -21,6 +21,11 @@ const Messages = () => {
     console.log("singleMessage", singleMessage);
     console.log("name", name);
     // console.log("content")
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("isAuth");
+    window.location.reload();
   };
 
   useEffect(() => {
@@ -55,6 +60,17 @@ const Messages = () => {
         <Text fontSize={"lg"} fontWeight={"500"}>
           Portfolio Feedback & Messages
         </Text>
+        <Button
+          size="sm"
+          position={"absolute"}
+          top="8px"
+          right="10px"
+          zIndex="10"
+          onClick={handleLogout}
+        >
+          {" "}
+          Logout{" "}
+        </Button>
       </Flex>
       <Flex w="100%" h="100vh" color="white" pt="50px">
         <Box w="20%" h="100%" bgColor="gray.800">
@@ -101,7 +117,9 @@ const Messages = () => {
             bgColor="gray.600"
             shadow={"lg"}
           >
-            <Text>{singleMessage?.length > 0 ? name : "Messaging History"}</Text>
+            <Text>
+              {singleMessage?.length > 0 ? name : "Messaging History"}
+            </Text>
           </Flex>
           <Flex
             flexDir="column"
