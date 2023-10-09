@@ -9,6 +9,8 @@ function Login() {
   const [data, setData] = useState({ email: "", pass: "" });
   const toast = useToast();
 
+  console.log("isAuth in login", isAuth);
+
   const handleChange = (e) => {
     setData({ ...data, [e.target.name]: e.target.value });
   };
@@ -49,6 +51,13 @@ function Login() {
   };
 
   if (isAuth) {
+    toast({
+      title: "You are already Loged in",
+      status: "success",
+      duration: 2000,
+      position: "top",
+      isClosable: true,
+    });
     return <Navigate to="/messages" />;
   }
 
