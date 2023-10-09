@@ -50,12 +50,29 @@ const Messages = () => {
           >
             <Text>Message Contacts</Text>
           </Flex>
-          <Flex flexDirection={"column"}>
-            {
-                msgData.length>0 && msgData.map((elem)=>(
-                    
-                ))
-            }
+          <Flex
+            flexDirection={"column"}
+            gap="10px"
+            fontSize={"sm"}
+            p="10px"
+            pr="20px"
+            pt="20px"
+          >
+            {msgData.length > 0 &&
+              msgData.map((elem) => (
+                <Box
+                  key={elem._id}
+                  textAlign={"left"}
+                  borderBottom="1px solid gray"
+                  pb="5px"
+                  cursor={"pointer"}
+                >
+                  <Text>{elem.name}</Text>
+                  <Text fontSize={"xs"} color={"gray.400"}>
+                    {elem.email}
+                  </Text>
+                </Box>
+              ))}
           </Flex>
         </Box>
         <Box w="80%" bgColor="gray.600" h="100%">
