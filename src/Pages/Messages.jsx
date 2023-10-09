@@ -5,8 +5,19 @@ import { useEffect, useState } from "react";
 
 const Messages = () => {
   const [msgData, setMsgData] = useState([]);
+  const [singleMessage, setSingleMessage] = useState([]);
 
-  console.log("msgData: ", msgData);
+  // console.log("msgData: ", msgData);
+
+  const handleSigleMessage = (id) => {
+    const initialMessage =
+      msgData.length > 0 && msgData.filter((elem) => elem._id === id);
+    console.log("initialMessage",initialMessage);
+    if (initialMessage.length > 0) {
+      setSingleMessage(initialMessage[0].content);
+    }
+    console.log("singleMessage", singleMessage);
+  };
 
   useEffect(() => {
     const getData = () => {
@@ -66,6 +77,7 @@ const Messages = () => {
                   borderBottom="1px solid gray"
                   pb="5px"
                   cursor={"pointer"}
+                  onClick={() => handleSigleMessage(elem._id)}
                 >
                   <Text>{elem.name}</Text>
                   <Text fontSize={"xs"} color={"gray.400"}>
