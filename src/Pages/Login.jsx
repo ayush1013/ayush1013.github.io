@@ -28,6 +28,14 @@ function Login() {
           isClosable: true,
         });
         toggleAuth();
+      } else {
+        toast({
+          title: "Wrong Email or Password please try again",
+          status: "error",
+          duration: 2000,
+          position: "top",
+          isClosable: true,
+        });
       }
     } else {
       toast({
