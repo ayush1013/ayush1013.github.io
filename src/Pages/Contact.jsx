@@ -183,6 +183,7 @@ const Contact = ({ darkMode }) => {
               shadow={"md"}
               fontSize={"sm"}
               variant={"unstyled"}
+              color={darkMode ? "#F0F3F7" : "black"}
               p="7px 10px"
               border={{
                 base: "1px dashed violet",
@@ -198,6 +199,7 @@ const Contact = ({ darkMode }) => {
               shadow={"md"}
               fontSize={"sm"}
               variant={"unstyled"}
+              color={darkMode ? "#F0F3F7" : "black"}
               type="email"
               p="7px 10px"
               border={{
@@ -211,6 +213,7 @@ const Contact = ({ darkMode }) => {
               name="content"
               value={message.content}
               variant={"unstyled"}
+              color={darkMode ? "#F0F3F7" : "black"}
               shadow={"md"}
               fontSize={"sm"}
               p="7px 10px"
